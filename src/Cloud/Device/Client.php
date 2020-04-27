@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 获取设备详情
+     * 获取设备详情.
+     *
      * @param $device_id
      *
      * @return array
@@ -18,7 +19,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取用户下设备列表
+     * 获取用户下设备列表.
+     *
      * @param $uid
      *
      * @return array
@@ -29,7 +31,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备列表
+     * 获取设备列表.
+     *
      * @param int  $page_no
      * @param int  $page_size
      * @param null $schema
@@ -52,7 +55,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 修改功能点名称
+     * 修改功能点名称.
+     *
      * @param $device_id
      * @param $function_code
      * @param $name
@@ -69,7 +73,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询设备日志
+     * 查询设备日志.
+     *
      * @param      $device_id
      * @param      $type
      * @param int  $start_time
@@ -101,7 +106,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 恢复设备出厂设置
+     * 恢复设备出厂设置.
+     *
      * @param $device_id
      *
      * @return array
@@ -112,7 +118,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 移除设备
+     * 移除设备.
+     *
      * @param $device_id
      *
      * @return array
@@ -123,7 +130,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询网关下的设备列表
+     * 查询网关下的设备列表.
+     *
      * @param $device_id
      *
      * @return array
@@ -134,7 +142,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询设备出厂信息
+     * 查询设备出厂信息.
+     *
      * @param $device_ids
      *
      * @return array
@@ -149,7 +158,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 修改设备名称
+     * 修改设备名称.
+     *
      * @param $device_id
      * @param $name
      *

@@ -2,8 +2,6 @@
 
 namespace Phpcast\TuyaCloudSdk\Kernel\Support;
 
-use Phpcast\TuyaCloudSdk\Kernel\Support\Collection;
-
 class Arr
 {
     /**

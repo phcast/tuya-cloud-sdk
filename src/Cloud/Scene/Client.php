@@ -11,7 +11,8 @@ use Phpcast\TuyaCloudSdk\Kernel\Transform\ExternalAction;
 class Client extends BaseClient
 {
     /**
-     * 查询家庭下的场景列表
+     * 查询家庭下的场景列表.
+     *
      * @param $home_id
      *
      * @return array
@@ -22,7 +23,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询默认场景图⽚列表
+     * 查询默认场景图⽚列表.
+     *
      * @return array
      */
     public function defaultPictures()
@@ -31,7 +33,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 触发场景
+     * 触发场景.
+     *
      * @param $home_id
      * @param $scene_id
      *
@@ -43,7 +46,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 删除场景
+     * 删除场景.
+     *
      * @param $home_id
      * @param $scene_id
      *
@@ -55,7 +59,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 添加场景
+     * 添加场景.
+     *
      * @param $home_id
      * @param $name
      * @param $background
@@ -81,7 +86,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 修改场景
+     * 修改场景.
+     *
      * @param       $home_id
      * @param       $scene_id
      * @param       $name
@@ -108,8 +114,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭下支持场景的设备列表
+     * 查询家庭下支持场景的设备列表.
+     *
      * @author zenglin
+     *
      * @param $home_id
      *
      * @return array
@@ -120,7 +128,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 场景绑定
+     * 场景绑定.
+     *
      * @param $device_id
      * @param $scene_id
      * @param $code
@@ -139,7 +148,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 场景解绑
+     * 场景解绑.
+     *
      * @param $device_id
      * @param $scene_id
      *
@@ -151,7 +161,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询设备已绑定的场景列表
+     * 查询设备已绑定的场景列表.
+     *
      * @param $device_id
      *
      * @return array
@@ -162,15 +173,16 @@ class Client extends BaseClient
     }
 
     /**
-     * 添加自动化
-     * @param string $home_id
-     * @param string $name
-     * @param string $background
-     * @param Conditions|array  $conditions
+     * 添加自动化.
+     *
+     * @param string                            $home_id
+     * @param string                            $name
+     * @param string                            $background
+     * @param Conditions|array                  $conditions
      * @param DeviceAction|ExternalAction|array $actions
      * @param $match_type
      * @param PreConditions|null $preconditions
-     * @param string|null $condition_rule
+     * @param string|null        $condition_rule
      *
      * @return array
      */
@@ -232,7 +244,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 修改自动化
+     * 修改自动化.
+     *
      * @param      $home_id
      * @param      $automation_id
      * @param      $name
@@ -261,7 +274,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 删除自动化
+     * 删除自动化.
+     *
      * @param $home_id
      * @param $automation_id
      *
@@ -273,7 +287,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭下的自动化列表
+     * 查询家庭下的自动化列表.
+     *
      * @param $home_id
      *
      * @return array
@@ -284,7 +299,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭下的某个自动化
+     * 查询家庭下的某个自动化.
+     *
      * @param $home_id
      * @param $automation_id
      *
@@ -296,7 +312,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 触发自动化外部条件
+     * 触发自动化外部条件.
+     *
      * @param $home_id
      * @param $automation_id
      * @param $conditions
@@ -313,7 +330,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭下支持自动化的设备列表
+     * 查询家庭下支持自动化的设备列表.
+     *
      * @param $home_id
      *
      * @return array
@@ -328,7 +346,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询自动化支持的天气条件
+     * 查询自动化支持的天气条件.
+     *
      * @return array
      */
     public function weatherConditions()
@@ -337,7 +356,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取家庭支持的联动条件
+     * 获取家庭支持的联动条件.
+     *
      * @param $home_id
      *
      * @return array
@@ -348,7 +368,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备支持的联动条件
+     * 获取设备支持的联动条件.
+     *
      * @param $device_id
      *
      * @return array

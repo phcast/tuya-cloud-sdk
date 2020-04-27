@@ -3,9 +3,7 @@
 namespace Phpcast\TuyaCloudSdk\Contracts;
 
 /**
- * Interface PropertyInterface
- *
- * @package Phpcast\TuyaCloudSdk\Contracts
+ * Interface PropertyInterface.
  */
 interface PropertyInterface
 {

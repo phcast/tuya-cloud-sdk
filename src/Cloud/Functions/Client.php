@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 按品类获取指令集
+     * 按品类获取指令集.
+     *
      * @param $category
      *
      * @return arrays
@@ -21,7 +22,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取指令集（按设备）
+     * 获取指令集（按设备）.
+     *
      * @param $device_id
      *
      * @return array
@@ -34,7 +36,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备规格属性（包含指令集、状态集）
+     * 获取设备规格属性（包含指令集、状态集）.
+     *
      * @param $device_id
      *
      * @return array
@@ -47,7 +50,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 下发设备指令
+     * 下发设备指令.
+     *
      * @param string $device_id
      * @param array  $commands
      *
@@ -64,6 +68,7 @@ class Client extends BaseClient
 
     /**
      * 获取设备最新状态
+     *
      * @param $device_id
      *
      * @return array

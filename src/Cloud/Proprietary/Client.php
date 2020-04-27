@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 普通遥控器配对
+     * 普通遥控器配对.
+     *
      * @param $infrared_id
      *
      * @return array
@@ -18,7 +19,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取指定类型品牌列表
+     * 获取指定类型品牌列表.
+     *
      * @param $infrared_id
      * @param $category_id
      *
@@ -30,7 +32,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取品牌支持遥控器索引列表
+     * 获取品牌支持遥控器索引列表.
+     *
      * @param $infrared_id
      * @param $category_id
      * @param $brand_id
@@ -43,7 +46,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 添加普通遥控器
+     * 添加普通遥控器.
+     *
      * @param      $infrared_id
      * @param      $category_id
      * @param      $remote_index
@@ -67,7 +71,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取省份列表
+     * 获取省份列表.
+     *
      * @param $infrared_id
      *
      * @return array
@@ -78,7 +83,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取城市列表
+     * 获取城市列表.
+     *
      * @param $infrared_id
      * @param $province_id
      *
@@ -90,7 +96,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取区域列表
+     * 获取区域列表.
+     *
      * @param $infrared_id
      * @param $province_id
      * @param $city_id
@@ -104,6 +111,7 @@ class Client extends BaseClient
 
     /**
      * 获取运营商列表：根据区域
+     *
      * @param $infrared_id
      * @param $area_id
      *
@@ -115,7 +123,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取品牌列表：根据运营商
+     * 获取品牌列表：根据运营商.
+     *
      * @param $infrared_id
      * @param $operator_id
      * @param $country_code
@@ -132,7 +141,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取遥控器索引列表：根据品牌id
+     * 获取遥控器索引列表：根据品牌id.
+     *
      * @param $infrared_id
      * @param $operator_id
      * @param $brand_id
@@ -145,7 +155,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取遥控器索引列表：根据区域id
+     * 获取遥控器索引列表：根据区域id.
+     *
      * @param $infrared_id
      * @param $operator_id
      * @param $area_id
@@ -158,7 +169,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 添加机顶盒遥控器
+     * 添加机顶盒遥控器.
+     *
      * @param      $infrared_id
      * @param      $category_id
      * @param      $brand_id
@@ -192,7 +204,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询电视频道列表
+     * 查询电视频道列表.
+     *
      * @param $infrared_id
      * @param $remote_id
      *

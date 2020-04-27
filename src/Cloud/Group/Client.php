@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 查询设备群组列表
+     * 查询设备群组列表.
+     *
      * @param      $pid
      * @param      $owner_id
      * @param null $uid
@@ -26,7 +27,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 根据设备查询分享人列表
+     * 根据设备查询分享人列表.
+     *
      * @param      $device_id
      * @param null $page
      * @param null $size
@@ -46,7 +48,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询群组详情
+     * 查询群组详情.
+     *
      * @param $group_id
      *
      * @return array
@@ -57,7 +60,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询群组列表
+     * 查询群组列表.
+     *
      * @param $uid
      *
      * @return array
@@ -68,7 +72,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 创建群组列表
+     * 创建群组列表.
+     *
      * @param $uid
      * @param $name
      * @param $pid
@@ -91,7 +96,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 更新群组分组
+     * 更新群组分组.
+     *
      * @param $group_id
      * @param $name
      * @param $device_list
@@ -109,7 +115,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 删除设备群组
+     * 删除设备群组.
+     *
      * @param $group_id
      *
      * @return array
@@ -120,7 +127,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 给设备群组下发指令
+     * 给设备群组下发指令.
+     *
      * @param $device_group_id
      * @param $functions
      *

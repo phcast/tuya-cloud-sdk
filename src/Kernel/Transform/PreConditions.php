@@ -37,7 +37,7 @@ class PreConditions extends Property
 
     protected function toJsonArray($data)
     {
-        if(!$data['display'] instanceof PreDisplay){
+        if (!$data['display'] instanceof PreDisplay) {
             throw new InvalidArgumentException('display parmam must a PreDisplay class');
         }
         $data['display'] = $data['display']->transformForRequest();
