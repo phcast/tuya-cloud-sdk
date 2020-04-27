@@ -3,9 +3,8 @@
 namespace Phpcast\TuyaCloudSdk;
 
 /**
- * Class Factory
+ * Class Factory.
  *
- * @package Phpcast\TuyaCloudSdk
  * @method static \Phpcast\TuyaCloudSdk\Cloud\Application cloud(array $config)
  */
 class Factory

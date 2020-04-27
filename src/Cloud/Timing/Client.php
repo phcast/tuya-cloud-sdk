@@ -8,6 +8,7 @@ class Client extends BaseClient
 {
     /**
      * 设备添加定时任务
+     *
      * @param $device_id
      * @param $category
      * @param $loops
@@ -31,7 +32,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询设备下的定时任务列表
+     * 查询设备下的定时任务列表.
+     *
      * @param string $device_id
      *
      * @return array
@@ -44,7 +46,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备某一个分类下⾯的定时任务信息
+     * 获取设备某一个分类下⾯的定时任务信息.
+     *
      * @param string $device_id
      * @param        $category
      *
@@ -58,7 +61,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 更新设备的某⼀个定时任务组的信息
+     * 更新设备的某⼀个定时任务组的信息.
+     *
      * @param $device_id
      * @param $group_id
      * @param $loops
@@ -84,6 +88,7 @@ class Client extends BaseClient
 
     /**
      * 更新设备定时任务组的状态
+     *
      * @param $device_id
      * @param $group_id
      * @param $category
@@ -102,6 +107,7 @@ class Client extends BaseClient
 
     /**
      * 删除设备下的所有定时任务
+     *
      * @param $device_id
      *
      * @return array
@@ -113,6 +119,7 @@ class Client extends BaseClient
 
     /**
      * 删除某个分类的定时任务
+     *
      * @param $device_id
      * @param $categories
      *
@@ -125,6 +132,7 @@ class Client extends BaseClient
 
     /**
      * 删除某个分类下⾯的某个定时组的定时任务
+     *
      * @param $device_id
      * @param $categories
      * @param $group_id
@@ -138,6 +146,7 @@ class Client extends BaseClient
 
     /**
      * 获取设备群组下的定时任务
+     *
      * @param $device_group_id
      *
      * @return array
@@ -158,6 +167,7 @@ class Client extends BaseClient
 
     /**
      * 创建群组定时任务
+     *
      * @param $id
      * @param $category
      * @param $loops
@@ -168,7 +178,12 @@ class Client extends BaseClient
      * @return arrays
      */
     public function createDeviceGroups(
-        $id, $category, $loops, $time_zone, $timezone_id, $instruct
+        $id,
+        $category,
+        $loops,
+        $time_zone,
+        $timezone_id,
+        $instruct
     ) {
         $params = [
             'id' => $id,
@@ -184,6 +199,7 @@ class Client extends BaseClient
 
     /**
      * 更新群组定时任务
+     *
      * @param $device_group_id
      * @param $group_id
      * @param $category
@@ -209,6 +225,7 @@ class Client extends BaseClient
 
     /**
      * 更新群组分类定时任务
+     *
      * @param $device_group_id
      * @param $group_id
      * @param $category
@@ -217,7 +234,10 @@ class Client extends BaseClient
      * @return array
      */
     public function updateDeviceGroupsAndCategory(
-        $device_group_id, $group_id, $category, $value
+        $device_group_id,
+        $group_id,
+        $category,
+        $value
     ) {
         $params = [
             'value' => $value,
@@ -228,6 +248,7 @@ class Client extends BaseClient
 
     /**
      * 删除设备群组下的定时任务
+     *
      * @param $device_group_id
      *
      * @return array
@@ -239,6 +260,7 @@ class Client extends BaseClient
 
     /**
      * 删除群组某个分类定时任务
+     *
      * @param $device_group_id
      * @param $category
      *
@@ -251,6 +273,7 @@ class Client extends BaseClient
 
     /**
      * 删除设备群组某个分类下的某个定时任务
+     *
      * @param $device_group_id
      * @param $category
      * @param $group_id
@@ -258,7 +281,9 @@ class Client extends BaseClient
      * @return array
      */
     public function deleteByDeviceGroupsAndCategoryAndGroup(
-        $device_group_id, $category, $group_id
+        $device_group_id,
+        $category,
+        $group_id
     ) {
         return $this->httpDelete("device-groups/{$device_group_id}/timers/categories/{$category}/groups/{$group_id}");
     }

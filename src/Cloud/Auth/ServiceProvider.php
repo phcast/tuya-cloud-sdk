@@ -6,9 +6,7 @@ use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
 /**
- * Class ServiceProvider
- *
- * @package Phpcast\TuyaCloudSdk\Cloud\Auth
+ * Class ServiceProvider.
  */
 class ServiceProvider implements ServiceProviderInterface
 {
@@ -17,7 +15,7 @@ class ServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $app)
     {
-        ! isset($app['access_token']) && $app['access_token'] = function ($app) {
+        !isset($app['access_token']) && $app['access_token'] = function ($app) {
             return new AccessToken($app);
         };
     }

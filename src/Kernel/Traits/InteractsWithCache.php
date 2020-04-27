@@ -50,15 +50,11 @@ trait InteractsWithCache
     public function setCache($cache)
     {
         if (empty(\array_intersect([SimpleCacheInterface::class, CacheItemPoolInterface::class], \class_implements($cache)))) {
-            throw new InvalidArgumentException(
-                \sprintf('The cache instance must implements %s or %s interface.',
-                    SimpleCacheInterface::class, CacheItemPoolInterface::class
-                )
-            );
+            throw new InvalidArgumentException(\sprintf('The cache instance must implements %s or %s interface.', SimpleCacheInterface::class, CacheItemPoolInterface::class));
         }
 
         if ($cache instanceof CacheItemPoolInterface) {
-            if (! $this->isSymfony43()) {
+            if (!$this->isSymfony43()) {
                 throw new InvalidArgumentException(sprintf('The cache instance must implements %s', SimpleCacheInterface::class));
             }
             $cache = new Psr16Cache($cache);

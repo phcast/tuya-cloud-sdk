@@ -27,7 +27,7 @@ class Display extends Property
         'operator',
         'value',
     ];
-    
+
     public function toJsonArray()
     {
         $arr = [
