@@ -21,7 +21,7 @@ class AccessToken extends BaseAccessToken
         ];
     }
 
-    protected function getHeaders():array
+    protected function getHeaders(): array
     {
         $t = get_total_millisecond();
         $sign = $this->app['sign']->generateTokenSign($this->app['config'], $t);

@@ -3,9 +3,7 @@
 namespace Phpcast\TuyaCloudSdk\Contracts;
 
 /**
- * Interface Arrayable
- *
- * @package Phpcast\TuyaCloudSdk\Contracts
+ * Interface Arrayable.
  */
 interface Arrayable
 {

@@ -8,10 +8,11 @@ class Sign
     {
         $clientId = $config->get('client_id');
         $secret = $config->get('secret');
+
         return mb_strtoupper(hash_hmac('sha256', $clientId.$t, $secret, false));
     }
 
-    public function generateProfessionSign(\Phpcast\TuyaCloudSdk\Kernel\Config $config,$accessToken,$t)
+    public function generateProfessionSign(\Phpcast\TuyaCloudSdk\Kernel\Config $config, $accessToken, $t)
     {
         $clientId = $config->get('client_id');
         $secret = $config->get('secret');

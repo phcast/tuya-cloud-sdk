@@ -65,7 +65,7 @@ class ServiceContainer extends Container
     {
         return array_merge([
             ConfigServiceProvider::class,
-            SignServiceProvider::class
+            SignServiceProvider::class,
         ], $this->providers);
     }
 
@@ -114,7 +114,6 @@ class ServiceContainer extends Container
 
     public function aggregate()
     {
-
     }
 
     /**
