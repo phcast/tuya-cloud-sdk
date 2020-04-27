@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 获取设备的升级信息
+     * 获取设备的升级信息.
+     *
      * @param $device_id
      *
      * @return array
@@ -18,7 +19,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 确认设备升级
+     * 确认设备升级.
+     *
      * @param $device_id
      *
      * @return array

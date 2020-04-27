@@ -28,7 +28,7 @@ class BaseClient
     /**
      * BaseClient constructor.
      *
-     * @param \Phpcast\TuyaCloudSdk\Kernel\ServiceContainer   $app
+     * @param \Phpcast\TuyaCloudSdk\Kernel\ServiceContainer             $app
      * @param \Phpcast\TuyaCloudSdk\Contracts\AccessTokenInterface|null $accessToken
      */
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
@@ -39,12 +39,13 @@ class BaseClient
 
     /**
      * @return mixed
+     *
      * @throws ConfigException
      */
     protected function getVersion()
     {
         $version = $this->app['config']->get('version');
-        if (! $version) {
+        if (!$version) {
             throw new ConfigException('Tuya api version need.');
         }
 
@@ -55,6 +56,7 @@ class BaseClient
      * @param $uri
      *
      * @return string
+     *
      * @throws ConfigException
      */
     protected function getRequestPath($uri)
@@ -68,7 +70,8 @@ class BaseClient
     public function getHeaders()
     {
         $t = get_total_millisecond();
-        $sign = $this->app['sign']->generateProfessionSign($this->app['config'],$this->accessToken->getToken()['access_token'],$t);
+        $sign = $this->app['sign']->generateProfessionSign($this->app['config'], $this->accessToken->getToken()['access_token'], $t);
+
         return [
             'client_id' => $this->app['config']['client_id'],
             'access_token' => $this->accessToken->getToken()['access_token'],
@@ -85,9 +88,9 @@ class BaseClient
      *
      * @return array
      */
-    public function httpGet($uri,$parmas = [])
+    public function httpGet($uri, $parmas = [])
     {
-        return $this->get($this->getRequestPath($uri),arrayFilter($parmas),$this->getHeaders());
+        return $this->get($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
     }
 
     /**
@@ -98,7 +101,7 @@ class BaseClient
      */
     public function httpPostJson($uri, $parmas)
     {
-        return $this->postJson($this->getRequestPath($uri),arrayFilter($parmas),$this->getHeaders());
+        return $this->postJson($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
     }
 
     /**
@@ -109,10 +112,10 @@ class BaseClient
      */
     public function httpPost($uri, $parmas)
     {
-        return $this->post($this->getRequestPath($uri),arrayFilter($parmas),$this->getHeaders());
+        return $this->post($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
     }
 
-    public function httpPut($uri,$query = [],$params = [])
+    public function httpPut($uri, $query = [], $params = [])
     {
         return $this->request('put', $this->getRequestPath($uri), [
             'headers' => $this->getHeaders(),
@@ -125,7 +128,7 @@ class BaseClient
     {
         return $this->request('delete', $this->getRequestPath($uri), [
             'headers' => $this->getHeaders(),
-            'query' => arrayFilter($query)
+            'query' => arrayFilter($query),
         ]);
     }
 }

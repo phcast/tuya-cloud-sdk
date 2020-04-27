@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 生成配网令牌
+     * 生成配网令牌.
+     *
      * @param string      $uid
      * @param string      $timeZoneId
      * @param string|null $owner_id
@@ -32,7 +33,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取配网设备列表
+     * 获取配网设备列表.
+     *
      * @param $pairToken
      *
      * @return array
@@ -46,7 +48,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 开放网关允许子设备入网
+     * 开放网关允许子设备入网.
+     *
      * @param        $device_id
      * @param string $duration
      *
@@ -62,7 +65,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取入网子设备列表
+     * 获取入网子设备列表.
+     *
      * @param string   $device_id
      * @param int|null $discovery_time
      *
@@ -78,7 +82,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取网关下的子设备列表
+     * 获取网关下的子设备列表.
+     *
      * @param string $device_id
      *
      * @return array

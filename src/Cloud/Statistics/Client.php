@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 数据概况
+     * 数据概况.
+     *
      * @param null $product_id
      *
      * @return array
@@ -22,7 +23,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 统计App日注册用户数
+     * 统计App日注册用户数.
+     *
      * @param $schema
      *
      * @return array
@@ -37,7 +39,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 统计App日活跃用户数
+     * 统计App日活跃用户数.
+     *
      * @param $schema
      * @param $date_type
      *
@@ -53,7 +56,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取App设备数据概况
+     * 获取App设备数据概况.
+     *
      * @param $schema
      *
      * @return array
@@ -64,7 +68,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备总体概况
+     * 获取设备总体概况.
+     *
      * @param null $product_id
      *
      * @return array
@@ -79,7 +84,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取活跃设备地区分布数据
+     * 获取活跃设备地区分布数据.
+     *
      * @param      $date_type
      * @param      $type
      * @param      $limit
@@ -100,7 +106,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取激活设备地区分布详情数据
+     * 获取激活设备地区分布详情数据.
+     *
      * @param      $date_type
      * @param      $type
      * @param      $limit
@@ -121,7 +128,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 统计设备日活跃数
+     * 统计设备日活跃数.
+     *
      * @param $date_type
      * @param $product_id
      *
@@ -138,7 +146,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 统计设备日激活数
+     * 统计设备日激活数.
+     *
      * @param      $date_type
      * @param null $product_id
      *
@@ -155,7 +164,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 统计设备日共激活数据
+     * 统计设备日共激活数据.
+     *
      * @param      $date_type
      * @param null $product_id
      *
@@ -172,7 +182,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备活跃数据概况
+     * 获取设备活跃数据概况.
+     *
      * @param null $product_id
      *
      * @return array
@@ -187,7 +198,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备激活数据概况
+     * 获取设备激活数据概况.
+     *
      * @param null $product_id
      *
      * @return array
@@ -203,6 +215,7 @@ class Client extends BaseClient
 
     /**
      * 获取历史累计值
+     *
      * @param $device_id
      * @param $code
      *
@@ -218,7 +231,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取设备支持的统计类型
+     * 获取设备支持的统计类型.
+     *
      * @param      $dev_id
      * @param null $code
      *
@@ -235,6 +249,7 @@ class Client extends BaseClient
 
     /**
      * 按分钟统计
+     *
      * @param $dev_id
      * @param $code
      * @param $start_minute
@@ -255,6 +270,7 @@ class Client extends BaseClient
 
     /**
      * 按小时统计
+     *
      * @param $dev_id
      * @param $code
      * @param $start_hour
@@ -277,6 +293,7 @@ class Client extends BaseClient
 
     /**
      * 按天统计累计值
+     *
      * @param      $device_id
      * @param      $code
      * @param      $start_day
@@ -299,6 +316,7 @@ class Client extends BaseClient
 
     /**
      * 按星期统计累计值
+     *
      * @param $device_id
      * @param $code
      * @param $start_week
@@ -319,6 +337,7 @@ class Client extends BaseClient
 
     /**
      * 按月统计累计值
+     *
      * @param $device_id
      * @param $code
      * @param $start_month

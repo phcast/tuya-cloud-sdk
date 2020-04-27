@@ -36,7 +36,6 @@ abstract class Property implements PropertyInterface
     protected $jsonAliases = [];
 
     /**
-     *
      * @param array $attributes
      */
     public function __construct(array $attributes = [])
@@ -74,7 +73,6 @@ abstract class Property implements PropertyInterface
     }
 
     /**
-     *
      * @return string
      */
     public function getType(): string

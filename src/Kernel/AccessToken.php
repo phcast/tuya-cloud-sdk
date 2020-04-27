@@ -70,7 +70,6 @@ abstract class AccessToken implements AccessTokenInterface
 
     public function refresh(): AccessTokenInterface
     {
-
     }
 
     /**
@@ -96,10 +95,10 @@ abstract class AccessToken implements AccessTokenInterface
         return $this->cache = $this->createDefaultCache();
     }
 
-    public function requestToken(array $credentials,$header=[])
+    public function requestToken(array $credentials, $header = [])
     {
-        $reponse = $this->sendRequest($credentials,$header);
-        if($reponse['success'] === true){
+        $reponse = $this->sendRequest($credentials, $header);
+        if (true === $reponse['success']) {
             return $reponse['result'];
         }
 
@@ -107,16 +106,16 @@ abstract class AccessToken implements AccessTokenInterface
 //        throw new RuntimeException($reponse['msg']);
     }
 
-    protected function sendRequest(array $credentials,$header)
+    protected function sendRequest(array $credentials, $header)
     {
         $query = $credentials;
 
-        return $this->get($this->getEndpoint('token'),$query,$header);
+        return $this->get($this->getEndpoint('token'), $query, $header);
     }
 
     protected function getEndpoint($uri)
     {
-        return $this->endpoint.'/'. $this->app['config']['version'].'/'.$uri;
+        return $this->endpoint.'/'.$this->app['config']['version'].'/'.$uri;
     }
 
     /**
