@@ -2,7 +2,7 @@
 
 namespace Phpcast\TuyaCloudSdk\Kernel\Providers;
 
-use Phpcast\TuyaCloudSdk\Support\Config;
+use Phpcast\TuyaCloudSdk\Kernel\Config;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 

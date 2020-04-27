@@ -103,7 +103,7 @@ abstract class AccessToken implements AccessTokenInterface
             return $reponse['result'];
         }
 
-        throw new RuntimeException(json_encode($credentials).json_encode($reponse));
+        throw new RuntimeException(json_encode($this->getHeaders()).json_encode($reponse));
 //        throw new RuntimeException($reponse['msg']);
     }
 
