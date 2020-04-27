@@ -3,6 +3,9 @@
 <p align="center">基于 tuya cloud api sdk 的封装</p>
 
 [![Build Status](https://travis-ci.org/phcast/tuya-cloud-sdk.svg?branch=master)](https://travis-ci.org/phcast/tuya-cloud-sdk)
+![StyleCI build status](https://github.styleci.io/repos/259198751/shield?branch=master)
+
+<a href="https://github.styleci.io/repos/259198751"><img>
 
 ## 安装
 
