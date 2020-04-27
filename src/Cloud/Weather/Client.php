@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 查询城市列表
+     * 查询城市列表.
+     *
      * @param $country_code
      *
      * @return array
@@ -18,7 +19,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询城市信息
+     * 查询城市信息.
+     *
      * @param $city_id
      *
      * @return array
@@ -29,7 +31,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 根据经纬度查询城市列表
+     * 根据经纬度查询城市列表.
+     *
      * @param $lon
      * @param $lat
      *
@@ -46,7 +49,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询城市天气预报
+     * 查询城市天气预报.
+     *
      * @param $city_id
      *
      * @return array
@@ -57,7 +61,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 根据ip查询天气预报,此接口有问题
+     * 根据ip查询天气预报,此接口有问题.
+     *
      * @return array
      */
     public function ipWeatherForecast()
@@ -66,7 +71,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 根据经纬度查询天气
+     * 根据经纬度查询天气.
+     *
      * @param $lon
      * @param $lat
      *
@@ -83,7 +89,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询城市当前天气情况
+     * 查询城市当前天气情况.
+     *
      * @param $city_id
      *
      * @return array

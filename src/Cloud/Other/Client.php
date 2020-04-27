@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 查询工单列表s
+     * 查询工单列表s.
+     *
      * @param $start_time
      * @param $end_time
      *
@@ -24,7 +25,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 添加工单评论
+     * 添加工单评论.
+     *
      * @param $dialog_id
      * @param $content
      *
@@ -40,7 +42,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 生成开放网关连接配置
+     * 生成开放网关连接配置.
+     *
      * @param $uid
      * @param $type
      * @param $unique_id

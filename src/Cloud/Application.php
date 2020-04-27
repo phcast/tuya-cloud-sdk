@@ -5,9 +5,8 @@ namespace Phpcast\TuyaCloudSdk\Cloud;
 use Phpcast\TuyaCloudSdk\Kernel\ServiceContainer;
 
 /**
- * Class Application
+ * Class Application.
  *
- * @package Phpcast\TuyaCloudSdk\Cloud
  * @property \Phpcast\TuyaCloudSdk\Cloud\Auth\AccessToken $access_token
  * @property \Phpcast\TuyaCloudSdk\Cloud\User\Client $user
  * @property \Phpcast\TuyaCloudSdk\Cloud\Network\Client $network

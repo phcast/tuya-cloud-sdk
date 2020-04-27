@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 用户列表
+     * 用户列表.
+     *
      * @param string  $schema
      * @param int|int $page
      * @param int|int $size
@@ -25,7 +26,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 同步用户
+     * 同步用户.
+     *
      * @param string $schema
      * @param string $country_code
      * @param string $username
@@ -49,7 +51,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 所有国家
+     * 所有国家.
+     *
      * @return array
      */
     public function allCountry()
@@ -58,8 +61,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 用户信息
+     * 用户信息.
+     *
      * @author zenglin
+     *
      * @param string $uid
      *
      * @return array
@@ -70,7 +75,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取用户token
+     * 获取用户token.
+     *
      * @param string $uid
      *
      * @return array
@@ -81,7 +87,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 核对用户信息
+     * 核对用户信息.
+     *
      * @param string $schema
      * @param string $username
      * @param string $username_type
@@ -103,7 +110,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 根据用户临时票据ticket换取授权令牌
+     * 根据用户临时票据ticket换取授权令牌.
+     *
      * @param string $ticket
      *
      * @return array
@@ -118,8 +126,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 校验ticket
+     * 校验ticket.
+     *
      * @author zenglin
+     *
      * @return array
      */
     public function verification($ticket)
@@ -132,7 +142,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 第三方免密同步用户
+     * 第三方免密同步用户.
+     *
      * @param string $country_code
      * @param string $from
      * @param string $username
@@ -153,7 +164,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 小程序用户登录
+     * 小程序用户登录.
+     *
      * @param $code
      * @param $encrypted_data
      * @param $iv
@@ -174,7 +186,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取用户的ticket
+     * 获取用户的ticket.
+     *
      * @param string $uid
      *
      * @return array

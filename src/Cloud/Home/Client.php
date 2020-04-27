@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 添加家庭
+     * 添加家庭.
+     *
      * @param       $uid
      * @param       $geo_name
      * @param       $name
@@ -34,7 +35,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 修改家庭
+     * 修改家庭.
+     *
      * @param      $home_id
      * @param null $geo_name
      * @param null $name
@@ -56,8 +58,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 删除家庭
+     * 删除家庭.
+     *
      * @author zenglin
+     *
      * @param $home_id
      *
      * @return array
@@ -68,7 +72,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭
+     * 查询家庭.
+     *
      * @param $home_id
      *
      * @return array
@@ -79,7 +84,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭下的设备详情
+     * 查询家庭下的设备详情.
+     *
      * @param $home_id
      *
      * @return array
@@ -90,7 +96,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 添加房间
+     * 添加房间.
+     *
      * @param $home_id
      * @param $name
      *
@@ -106,7 +113,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 修改房间
+     * 修改房间.
+     *
      * @param $home_id
      * @param $room_id
      * @param $name
@@ -123,7 +131,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 删除房间
+     * 删除房间.
+     *
      * @param $home_id
      * @param $room_id
      *
@@ -135,7 +144,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭和房间信息
+     * 查询家庭和房间信息.
+     *
      * @param $home_id
      *
      * @return array
@@ -146,7 +156,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭房间设备
+     * 查询家庭房间设备.
+     *
      * @param $home_id
      * @param $room_id
      *
@@ -158,7 +169,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 添加家庭成员
+     * 添加家庭成员.
+     *
      * @param      $home_id
      * @param      $app_schema
      * @param      $country_code
@@ -184,7 +196,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 设置成员权限
+     * 设置成员权限.
+     *
      * @param $home_id
      * @param $uid
      * @param $isAdmin
@@ -201,7 +214,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 删除家庭成员
+     * 删除家庭成员.
+     *
      * @param $home_id
      * @param $uid
      *
@@ -213,7 +227,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询家庭成员
+     * 查询家庭成员.
+     *
      * @param $home_id
      *
      * @return array
@@ -224,7 +239,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 查询⽤户所在的家庭列表
+     * 查询⽤户所在的家庭列表.
+     *
      * @param $uid
      *
      * @return array

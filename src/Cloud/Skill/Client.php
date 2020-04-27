@@ -7,7 +7,8 @@ use Phpcast\TuyaCloudSdk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 发现用户下设备列表和场景列表
+     * 发现用户下设备列表和场景列表.
+     *
      * @param $uid
      *
      * @return array
@@ -18,7 +19,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 设备支持的技能
+     * 设备支持的技能.
+     *
      * @param $device_identity
      *
      * @return array
@@ -29,7 +31,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 设备技能状态查询
+     * 设备技能状态查询.
+     *
      * @param $device_identity
      *
      * @return array
@@ -40,7 +43,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 技能纬度控制设备
+     * 技能纬度控制设备.
+     *
      * @param $device_identity
      * @param $commands
      *
@@ -56,7 +60,8 @@ class Client extends BaseClient
     }
 
     /**
-     * 触发场景
+     * 触发场景.
+     *
      * @param $scene_id
      *
      * @return array

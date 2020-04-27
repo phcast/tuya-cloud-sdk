@@ -6,9 +6,7 @@ use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
 /**
- * Class ServiceProvider
- *
- * @package Phpcast\TuyaCloudSdk\Cloud\User
+ * Class ServiceProvider.
  */
 class ServiceProvider implements ServiceProviderInterface
 {
