@@ -8,6 +8,8 @@
 $ composer require phpcast/tuya-cloud-sdk -vvv
 ```
 
+[![Build Status](https://travis-ci.org/phcast/tuya-cloud-sdk.svg?branch=master)](https://travis-ci.org/phcast/tuya-cloud-sdk)
+
 ## 使用
 
 ```$xslt
