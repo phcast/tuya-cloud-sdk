@@ -21,6 +21,7 @@ use Phpcast\TuyaCloudSdk\Kernel\ServiceContainer;
  * @property \Phpcast\TuyaCloudSdk\Cloud\Group\Client $group
  * @property \Phpcast\TuyaCloudSdk\Cloud\Country\Client $country
  * @property \Phpcast\TuyaCloudSdk\Cloud\Proprietary\Client $proprietary
+ * @property \Phpcast\TuyaCloudSdk\Cloud\Device\Client $device
  */
 class Application extends ServiceContainer
 {
@@ -42,5 +43,6 @@ class Application extends ServiceContainer
         Group\ServiceProvider::class,
         Country\ServiceProvider::class,
         Proprietary\ServiceProvider::class,
+        Device\ServiceProvider::class,
     ];
 }
