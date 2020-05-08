@@ -9,7 +9,7 @@ function getMillisecond()
 
 function get_total_millisecond()
 {
-    return bcmul(microtime(true),1000,0);
+    return bcmul(microtime(true), 1000, 0);
 }
 
 function arrayFilter($array)
