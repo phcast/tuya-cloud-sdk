@@ -32,7 +32,7 @@ class Client extends BaseClient
     {
         $params = [];
 
-        return $this->httpGet("fdevices/{$device_id}/functions", $params);
+        return $this->httpGet("devices/{$device_id}/functions", $params);
     }
 
     /**
@@ -46,7 +46,7 @@ class Client extends BaseClient
     {
         $params = [];
 
-        return $this->httpGet("fdevices/{$device_id}/specifications", $params);
+        return $this->httpGet("devices/{$device_id}/specifications", $params);
     }
 
     /**
