@@ -9,12 +9,7 @@ function getMillisecond()
 
 function get_total_millisecond()
 {
-    $time = explode(' ', microtime());
-    $time = $time[1].($time[0] * 1000);
-    $time2 = explode('.', $time);
-    $time = $time2[0];
-
-    return (string) $time;
+    return bcmul(microtime(true),1000,0);
 }
 
 function arrayFilter($array)
