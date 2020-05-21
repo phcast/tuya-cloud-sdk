@@ -37,6 +37,11 @@ class BaseClient
         $this->accessToken = $accessToken ?? $this->app['access_token'];
     }
 
+    public function getTimeout()
+    {
+        return $this->app['config']->get('http_timeout') ?: 5.0;
+    }
+
     /**
      * @return mixed
      *
