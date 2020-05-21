@@ -96,7 +96,7 @@ class BaseClient
     public function httpGet($uri, $parmas = [])
     {
         $response = $this->get($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
-        if(!$response['success'] && $response['code'] == '1010'){
+        if (!$response['success'] && '1010' == $response['code']) {
             $this->accessToken->refresh();
             $response = $this->get($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
         }
@@ -113,7 +113,7 @@ class BaseClient
     public function httpPostJson($uri, $parmas)
     {
         $response = $this->postJson($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
-        if(!$response['success'] && $response['code'] == '1010'){
+        if (!$response['success'] && '1010' == $response['code']) {
             $this->accessToken->refresh();
             $response = $this->postJson($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
         }
@@ -130,7 +130,7 @@ class BaseClient
     public function httpPost($uri, $parmas)
     {
         $response = $this->post($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
-        if(!$response['success'] && $response['code'] == '1010'){
+        if (!$response['success'] && '1010' == $response['code']) {
             $this->accessToken->refresh();
             $response = $this->post($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
         }
@@ -145,7 +145,7 @@ class BaseClient
             'query' => arrayFilter($query),
             'params' => arrayFilter($params),
         ]);
-        if(!$response['success'] && $response['code'] == '1010'){
+        if (!$response['success'] && '1010' == $response['code']) {
             $this->accessToken->refresh();
             $response = $this->request('put', $this->getRequestPath($uri), [
                 'headers' => $this->getHeaders(),
@@ -163,7 +163,7 @@ class BaseClient
             'headers' => $this->getHeaders(),
             'query' => arrayFilter($query),
         ]);
-        if(!$response['success'] && $response['code'] == '1010'){
+        if (!$response['success'] && '1010' == $response['code']) {
             $this->accessToken->refresh();
             $response = $this->request('delete', $this->getRequestPath($uri), [
                 'headers' => $this->getHeaders(),
