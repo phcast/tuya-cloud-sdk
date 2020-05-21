@@ -90,7 +90,13 @@ class BaseClient
      */
     public function httpGet($uri, $parmas = [])
     {
-        return $this->get($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        $response = $this->get($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        if(!$response['success'] && $response['code'] == '1010'){
+            $this->accessToken->refresh();
+            $response = $this->get($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        }
+
+        return $response;
     }
 
     /**
@@ -101,7 +107,13 @@ class BaseClient
      */
     public function httpPostJson($uri, $parmas)
     {
-        return $this->postJson($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        $response = $this->postJson($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        if(!$response['success'] && $response['code'] == '1010'){
+            $this->accessToken->refresh();
+            $response = $this->postJson($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        }
+
+        return $response;
     }
 
     /**
@@ -112,23 +124,48 @@ class BaseClient
      */
     public function httpPost($uri, $parmas)
     {
-        return $this->post($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        $response = $this->post($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        if(!$response['success'] && $response['code'] == '1010'){
+            $this->accessToken->refresh();
+            $response = $this->post($this->getRequestPath($uri), arrayFilter($parmas), $this->getHeaders());
+        }
+
+        return $response;
     }
 
     public function httpPut($uri, $query = [], $params = [])
     {
-        return $this->request('put', $this->getRequestPath($uri), [
+        $response = $this->request('put', $this->getRequestPath($uri), [
             'headers' => $this->getHeaders(),
             'query' => arrayFilter($query),
             'params' => arrayFilter($params),
         ]);
+        if(!$response['success'] && $response['code'] == '1010'){
+            $this->accessToken->refresh();
+            $response = $this->request('put', $this->getRequestPath($uri), [
+                'headers' => $this->getHeaders(),
+                'query' => arrayFilter($query),
+                'params' => arrayFilter($params),
+            ]);
+        }
+
+        return $response;
     }
 
     public function httpDelete($uri, $query = [])
     {
-        return $this->request('delete', $this->getRequestPath($uri), [
+        $response = $this->request('delete', $this->getRequestPath($uri), [
             'headers' => $this->getHeaders(),
             'query' => arrayFilter($query),
         ]);
+        if(!$response['success'] && $response['code'] == '1010'){
+            $this->accessToken->refresh();
+            $response = $this->request('delete', $this->getRequestPath($uri), [
+                'headers' => $this->getHeaders(),
+                'query' => arrayFilter($query),
+            ]);
+        }
+
+        return $response;
     }
 }

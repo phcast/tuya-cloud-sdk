@@ -70,6 +70,9 @@ abstract class AccessToken implements AccessTokenInterface
 
     public function refresh(): AccessTokenInterface
     {
+        $this->getToken(true);
+
+        return $this;
     }
 
     /**
@@ -103,7 +106,6 @@ abstract class AccessToken implements AccessTokenInterface
         }
 
         throw new RuntimeException(json_encode($this->getHeaders()).json_encode($reponse));
-//        throw new RuntimeException($reponse['msg']);
     }
 
     protected function sendRequest(array $credentials, $header)
