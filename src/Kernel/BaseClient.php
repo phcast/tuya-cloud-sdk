@@ -28,8 +28,7 @@ class BaseClient
     /**
      * BaseClient constructor.
      *
-     * @param \Phpcast\TuyaCloudSdk\Kernel\ServiceContainer             $app
-     * @param \Phpcast\TuyaCloudSdk\Contracts\AccessTokenInterface|null $accessToken
+     * @param \Phpcast\TuyaCloudSdk\Kernel\ServiceContainer $app
      */
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
     {

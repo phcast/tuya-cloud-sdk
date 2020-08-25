@@ -9,13 +9,6 @@ class Client extends BaseClient
     /**
      * 生成配网令牌.
      *
-     * @param string      $uid
-     * @param string      $timeZoneId
-     * @param string|null $owner_id
-     * @param string|null $lon
-     * @param string|null $lat
-     * @param string|null $lang
-     *
      * @return array
      */
     public function token(string $uid, string $timeZoneId, ?string $owner_id = null, ?string $lon = null, ?string $lat = null, ?string $lang = null)
@@ -67,9 +60,6 @@ class Client extends BaseClient
     /**
      * 获取入网子设备列表.
      *
-     * @param string   $device_id
-     * @param int|null $discovery_time
-     *
      * @return array
      */
     public function listSub(string $device_id, ?int $discovery_time = null)
@@ -83,8 +73,6 @@ class Client extends BaseClient
 
     /**
      * 获取网关下的子设备列表.
-     *
-     * @param string $device_id
      *
      * @return array
      */

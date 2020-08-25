@@ -11,9 +11,6 @@ class AccessToken extends BaseAccessToken
      */
     protected $endpoint = 'https://openapi.tuyacn.com';
 
-    /**
-     * @return array
-     */
     protected function getCredentials(): array
     {
         return [

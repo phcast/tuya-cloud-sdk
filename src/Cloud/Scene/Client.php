@@ -88,13 +88,12 @@ class Client extends BaseClient
     /**
      * 修改场景.
      *
-     * @param       $home_id
-     * @param       $scene_id
-     * @param       $name
-     * @param       $background
-     * @param array $executor_property
-     * @param       $action_executor
-     * @param       $entity_id
+     * @param $home_id
+     * @param $scene_id
+     * @param $name
+     * @param $background
+     * @param $action_executor
+     * @param $entity_id
      *
      * @return array
      */

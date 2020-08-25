@@ -11,7 +11,6 @@ class Factory
 {
     /**
      * @param string $name
-     * @param array  $config
      *
      * @return \EasyWeChat\Kernel\ServiceContainer
      */

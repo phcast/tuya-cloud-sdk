@@ -33,8 +33,6 @@ class Client extends BaseClient
     /**
      * 获取设备列表.
      *
-     * @param int  $page_no
-     * @param int  $page_size
      * @param null $schema
      * @param null $product_id
      * @param null $device_ids
@@ -77,8 +75,6 @@ class Client extends BaseClient
      *
      * @param      $device_id
      * @param      $type
-     * @param int  $start_time
-     * @param int  $end_time
      * @param null $codes
      * @param null $start_row_key
      * @param null $last_row_key

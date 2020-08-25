@@ -77,9 +77,6 @@ trait InteractsWithCache
         return new FilesystemCache();
     }
 
-    /**
-     * @return bool
-     */
     protected function isSymfony43(): bool
     {
         return \class_exists('Symfony\Component\Cache\Psr16Cache');

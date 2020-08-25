@@ -52,9 +52,6 @@ class Client extends BaseClient
     /**
      * 下发设备指令.
      *
-     * @param string $device_id
-     * @param array  $commands
-     *
      * @return array
      */
     public function commands(string $device_id, array $commands)
