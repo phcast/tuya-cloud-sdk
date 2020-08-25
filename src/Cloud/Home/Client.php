@@ -17,7 +17,7 @@ class Client extends BaseClient
      *
      * @return array
      */
-    public function create($uid,$geo_name, $name, $lat, $lon, array $rooms)
+    public function create($uid, $geo_name, $name, $lat, $lon, array $rooms)
     {
         $params = [
             'uid' => $uid,
