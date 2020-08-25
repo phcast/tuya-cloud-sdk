@@ -21,8 +21,6 @@ trait HasAttributes
     /**
      * Set Attributes.
      *
-     * @param array $attributes
-     *
      * @return \EasyWeChat\Kernel\Traits\HasAttributes
      */
     public function setAttributes(array $attributes = [])
@@ -124,8 +122,6 @@ trait HasAttributes
     }
 
     /**
-     * @param string $key
-     *
      * @return bool
      */
     public function has(string $key)
@@ -134,8 +130,6 @@ trait HasAttributes
     }
 
     /**
-     * @param array $attributes
-     *
      * @return $this
      */
     public function merge(array $attributes)

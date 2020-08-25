@@ -7,9 +7,6 @@ namespace Phpcast\TuyaCloudSdk\Contracts;
  */
 interface PropertyInterface
 {
-    /**
-     * @return string
-     */
     public function getType(): string;
 
     /**

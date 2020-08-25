@@ -35,9 +35,6 @@ abstract class Property implements PropertyInterface
      */
     protected $jsonAliases = [];
 
-    /**
-     * @param array $attributes
-     */
     public function __construct(array $attributes = [])
     {
         $this->setAttributes($attributes);
@@ -49,9 +46,6 @@ abstract class Property implements PropertyInterface
     }
 
     /**
-     * @param array $data
-     * @param array $aliases
-     *
      * @return array|mixed
      *
      * @throws InvalidArgumentException
@@ -72,17 +66,11 @@ abstract class Property implements PropertyInterface
         return $data;
     }
 
-    /**
-     * @return string
-     */
     public function getType(): string
     {
         return $this->type;
     }
 
-    /**
-     * @param string $type
-     */
     public function setType(string $type)
     {
         $this->type = $type;

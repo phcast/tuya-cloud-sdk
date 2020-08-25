@@ -45,8 +45,6 @@ abstract class AccessToken implements AccessTokenInterface
 
     /**
      * AccessToken constructor.
-     *
-     * @param \Pimple\Container $app
      */
     public function __construct(Container $app)
     {
@@ -121,15 +119,12 @@ abstract class AccessToken implements AccessTokenInterface
     }
 
     /**
-     * @param string $token
-     * @param int    $lifetime
-     *
      * @return \Phpcast\TuyaCloudSdk\Kernel\Contracts\AccessTokenInterface
      *
      * @throws \Psr\SimpleCache\InvalidArgumentException
      * @throws \Phpcast\TuyaCloudSdk\Kernel\Exceptions\RuntimeException
      */
-    public function setToken(string $token, int $lifetime = 7200): \Phpcast\TuyaCloudSdk\Contracts\AccessTokenInterface
+    public function setToken(string $token, int $lifetime = 7200): AccessTokenInterface
     {
         $this->getCache()->set($this->getCacheKey(), [
             $this->tokenKey => $token,
@@ -145,8 +140,6 @@ abstract class AccessToken implements AccessTokenInterface
 
     /**
      * Credential for get token.
-     *
-     * @return array
      */
     abstract protected function getCredentials(): array;
 

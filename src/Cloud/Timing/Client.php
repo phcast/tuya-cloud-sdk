@@ -34,8 +34,6 @@ class Client extends BaseClient
     /**
      * 查询设备下的定时任务列表.
      *
-     * @param string $device_id
-     *
      * @return array
      */
     public function getTimers(string $device_id)
@@ -48,8 +46,7 @@ class Client extends BaseClient
     /**
      * 获取设备某一个分类下⾯的定时任务信息.
      *
-     * @param string $device_id
-     * @param        $category
+     * @param $category
      *
      * @return array
      */

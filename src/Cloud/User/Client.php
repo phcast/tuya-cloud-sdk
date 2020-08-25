@@ -9,7 +9,6 @@ class Client extends BaseClient
     /**
      * 用户列表.
      *
-     * @param string  $schema
      * @param int|int $page
      * @param int|int $size
      *
@@ -28,11 +27,6 @@ class Client extends BaseClient
     /**
      * 同步用户.
      *
-     * @param string $schema
-     * @param string $country_code
-     * @param string $username
-     * @param string $password
-     * @param string $username_type
      * @param string $nick_name
      *
      * @return array
@@ -65,8 +59,6 @@ class Client extends BaseClient
      *
      * @author zenglin
      *
-     * @param string $uid
-     *
      * @return array
      */
     public function infos(string $uid)
@@ -77,8 +69,6 @@ class Client extends BaseClient
     /**
      * 获取用户token.
      *
-     * @param string $uid
-     *
      * @return array
      */
     public function token(string $uid)
@@ -88,12 +78,6 @@ class Client extends BaseClient
 
     /**
      * 核对用户信息.
-     *
-     * @param string $schema
-     * @param string $username
-     * @param string $username_type
-     * @param string $password
-     * @param string $country_code
      *
      * @return array
      */
@@ -111,8 +95,6 @@ class Client extends BaseClient
 
     /**
      * 根据用户临时票据ticket换取授权令牌.
-     *
-     * @param string $ticket
      *
      * @return array
      */
@@ -143,11 +125,6 @@ class Client extends BaseClient
 
     /**
      * 第三方免密同步用户.
-     *
-     * @param string $country_code
-     * @param string $from
-     * @param string $username
-     * @param string $schema
      *
      * @return array
      */
@@ -187,8 +164,6 @@ class Client extends BaseClient
 
     /**
      * 获取用户的ticket.
-     *
-     * @param string $uid
      *
      * @return array
      */

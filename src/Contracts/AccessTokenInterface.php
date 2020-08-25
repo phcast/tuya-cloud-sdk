@@ -4,9 +4,6 @@ namespace Phpcast\TuyaCloudSdk\Contracts;
 
 interface AccessTokenInterface
 {
-    /**
-     * @return array
-     */
     public function getToken(): array;
 
     /**

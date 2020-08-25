@@ -9,12 +9,11 @@ class Client extends BaseClient
     /**
      * 添加家庭.
      *
-     * @param       $uid
-     * @param       $geo_name
-     * @param       $name
-     * @param       $lat
-     * @param       $lon
-     * @param array $rooms
+     * @param $uid
+     * @param $geo_name
+     * @param $name
+     * @param $lat
+     * @param $lon
      *
      * @return array
      */
@@ -171,12 +170,11 @@ class Client extends BaseClient
     /**
      * 添加家庭成员.
      *
-     * @param      $home_id
-     * @param      $app_schema
-     * @param      $country_code
-     * @param      $member_account
-     * @param bool $isAdmin
-     * @param      $name
+     * @param $home_id
+     * @param $app_schema
+     * @param $country_code
+     * @param $member_account
+     * @param $name
      *
      * @return array
      */
