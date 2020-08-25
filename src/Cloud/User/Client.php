@@ -194,6 +194,6 @@ class Client extends BaseClient
      */
     public function ticket(string $uid)
     {
-        return $this->httpPost("/users/{$uid}/ticket", []);
+        return $this->httpPost("users/{$uid}/ticket", []);
     }
 }
