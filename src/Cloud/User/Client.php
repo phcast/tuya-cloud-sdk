@@ -17,8 +17,8 @@ class Client extends BaseClient
     public function users(string $schema, int $page = 1, int $size = 10)
     {
         $parmas = [
-            'page' => $page,
-            'size' => $size,
+            'page_no' => $page,
+            'page_size' => $size,
         ];
 
         return $this->httpGet("apps/{$schema}/users", $parmas);
