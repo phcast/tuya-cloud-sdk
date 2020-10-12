@@ -171,29 +171,32 @@ class Client extends BaseClient
     }
 
     /**
-     * 设备禁启用
+     * 设备禁启用.
+     *
      * @param int $authorityStatus 0:禁用，1：启用
-     * @param array $devices
+     *
      * @return array
      */
-    public function authority(int $authorityStatus,array $devices)
+    public function authority(int $authorityStatus, array $devices)
     {
         $params = [
             'devices' => $devices,
             'deviceAuthorityStatus' => $authorityStatus,
         ];
 
-        return $this->httpPostJson('aispeech/device/authority',$params);
+        return $this->httpPostJson('aispeech/device/authority', $params);
     }
 
     /**
-     * 禁用设备查询
+     * 禁用设备查询.
+     *
      * @param $pageSize
      * @param $pageIndex
      * @param string $uuid
+     *
      * @return array
      */
-    public function authorityList(int $pageSize,int $pageIndex,?string $uuid = '')
+    public function authorityList(int $pageSize, int $pageIndex, ?string $uuid = '')
     {
         $params = [
             'pageSize' => $pageSize,
@@ -201,6 +204,6 @@ class Client extends BaseClient
             'uuid' => $uuid,
         ];
 
-        return $this->httpPostJson('aispeech/device/authorityList',$params);
+        return $this->httpPostJson('aispeech/device/authorityList', $params);
     }
 }
