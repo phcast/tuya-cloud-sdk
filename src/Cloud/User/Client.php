@@ -31,7 +31,7 @@ class Client extends BaseClient
      *
      * @return array
      */
-    public function synUsers(string $schema, string $country_code, string $username, string $password, string $username_type,?string $nick_name)
+    public function synUsers(string $schema, string $country_code, string $username, string $password, string $username_type, ?string $nick_name)
     {
         $params = [
             'country_code' => $country_code,
