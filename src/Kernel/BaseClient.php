@@ -11,6 +11,7 @@ class BaseClient
     use HasHttpRequest;
 
     /**
+     * 正式环境url
      * @var
      */
     protected $baseUri = 'https://openapi.tuyacn.com';
@@ -65,7 +66,16 @@ class BaseClient
      */
     protected function getRequestPath($uri)
     {
-        return $this->baseUri.'/'.$this->getVersion().'/'.$uri;
+        return $this->baseUri().'/'.$this->getVersion().'/'.$uri;
+    }
+
+    /**
+     * 获取可配置环境url
+     * @return mixed|string
+     */
+    protected function baseUri()
+    {
+        return $this->app['config']['base_uri'] ?: $this->baseUri;
     }
 
     /**

@@ -9,7 +9,7 @@ class AccessToken extends BaseAccessToken
     /**
      * @var string
      */
-    protected $endpoint = 'https://openapi.tuyacn.com';
+    protected $endpoint = '';
 
     protected function getCredentials(): array
     {
