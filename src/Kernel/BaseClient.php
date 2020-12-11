@@ -65,6 +65,7 @@ class BaseClient
 
     /**
      * @param $version
+     *
      * @return $this
      */
     public function setVersion($version)
