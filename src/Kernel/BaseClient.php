@@ -28,6 +28,11 @@ class BaseClient
     protected $accessToken;
 
     /**
+     * @var string
+     */
+    protected $version;
+
+    /**
      * BaseClient constructor.
      *
      * @param \Phpcast\TuyaCloudSdk\Kernel\ServiceContainer $app
@@ -48,14 +53,25 @@ class BaseClient
      *
      * @throws ConfigException
      */
-    protected function getVersion()
+    public function getVersion()
     {
         $version = $this->app['config']->get('version');
         if (!$version) {
             throw new ConfigException('Tuya api version need.');
         }
 
-        return $version;
+        return $this->version ?: $version;
+    }
+
+    /**
+     * @param $version
+     * @return $this
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
+
+        return $this;
     }
 
     /**
