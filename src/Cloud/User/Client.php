@@ -14,11 +14,13 @@ class Client extends BaseClient
      *
      * @return array
      */
-    public function users(string $schema, int $page = 1, int $size = 10)
+    public function users(string $schema, int $page = 1, int $size = 10 ,?int $startTime = null,?int $endTime = null)
     {
         $parmas = [
             'page_no' => $page,
             'page_size' => $size,
+            'start_time' => $startTime ?: '',
+            'end_time' => $endTime ?: '',
         ];
 
         return $this->httpGet("apps/{$schema}/users", $parmas);
