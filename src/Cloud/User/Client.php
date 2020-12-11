@@ -14,7 +14,7 @@ class Client extends BaseClient
      *
      * @return array
      */
-    public function users(string $schema, int $page = 1, int $size = 10 ,?int $startTime = null,?int $endTime = null)
+    public function users(string $schema, int $page = 1, int $size = 10, ?int $startTime = null, ?int $endTime = null)
     {
         $parmas = [
             'page_no' => $page,
